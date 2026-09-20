@@ -1,40 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Kian Entezari | Engineering Portfolio</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #111;
+      background: #fff;
+    }
+
+    nav {
+      padding: 24px 8%;
+      font-size: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin-right: 30px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 70px 8% 40px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 21px;
+      margin-top: 0;
+    }
+
+    main {
+      padding: 0 8%;
+      max-width: 1100px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-top: 70px;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    section {
+      margin-bottom: 100px;
+      scroll-margin-top: 30px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 850px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      border: 1px solid #111;
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .button:hover {
+      background: #111;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="#robotics">Robotics</a>
-  <a href="#biosensor">Biosensor</a>
-  <a href="#resume">Resume</a>
-</nav>
+  <nav>
+    <a href="#robotics">Robotics</a>
+    <a href="#biosensor">Biosensor</a>
+    <a href="#resume">Resume</a>
+  </nav>
 
-<h1>Kian Entezari</h1>
-<p>Electrical & Computer Engineering | Robotics | Computer Vision</p>
-<h2>Projects</h2>
+  <header>
+    <h1>Kian Entezari</h1>
+    <p>Electrical & Computer Engineering | Robotics | Computer Vision</p>
+  </header>
 
-<section id="robotics">
-  <h3>Robotic Arm - Stereo Object Detection</h3>
-  <p>
-    Stereo vision system that detects objects, estimates their 3D position,
-    and sends coordinates to a robotic arm for pick-and-place.
-  </p>
-</section>
+  <main>
 
-<section id="biosensor">
-  <h3>Biosensor Project</h3>
-  <p>
-    Description of the biosensor project.
-  </p>
-</section>
+    <section id="robotics">
 
-<section id="resume">
-  <h3>Resume</h3>
-  <a href="resume.pdf">View Resume</a>
-</section>
+      <h2>Robotics</h2>
+
+      <h3>Robotic Arm - Stereo Object Detection</h3>
+
+      <p>
+        Stereo vision system that detects objects, estimates their 3D position,
+        and sends coordinates to a robotic arm for automated pick-and-place.
+      </p>
+
+      <video controls>
+        <source src="media/demo.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+
+      <br>
+
+      <a
+        class="button"
+        href="https://github.com/kianxyz-net/Robotic-Arm---Stereo-Detection"
+        target="_blank"
+      >
+        View Code on GitHub
+      </a>
+
+    </section>
+
+    <section id="biosensor">
+
+      <h2>Biosensor</h2>
+
+      <h3>Biosensor Project</h3>
+
+      <p>
+        Description of the biosensor project.
+      </p>
+
+    </section>
+
+    <section id="resume">
+
+      <h2>Resume</h2>
+
+      <p>
+        View my resume for additional experience, coursework, and technical skills.
+      </p>
+
+      <a
+        class="button"
+        href="resume.pdf"
+        target="_blank"
+      >
+        View Resume
+      </a>
+
+    </section>
+
+  </main>
 
 </body>
 </html>
