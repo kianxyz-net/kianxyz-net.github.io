@@ -12,7 +12,7 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       color: #111;
       background: #fff;
@@ -20,14 +20,14 @@
 
     nav {
       padding: 24px 8%;
-      font-size: 20px;
       border-bottom: 1px solid #ddd;
+      font-size: 19px;
     }
 
     nav a {
-      margin-right: 30px;
-      text-decoration: none;
+      margin-right: 32px;
       color: #111;
+      text-decoration: none;
       font-weight: 600;
     }
 
@@ -36,17 +36,17 @@
     }
 
     header {
-      padding: 70px 8% 40px;
+      padding: 80px 8% 60px;
     }
 
     h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 52px;
+      margin: 0 0 12px 0;
     }
 
     header p {
       font-size: 21px;
-      margin-top: 0;
+      margin: 0;
     }
 
     main {
@@ -54,36 +54,44 @@
       max-width: 1100px;
     }
 
+    section {
+      margin-bottom: 120px;
+      scroll-margin-top: 40px;
+    }
+
     h2 {
-      font-size: 36px;
-      margin-top: 70px;
-      margin-bottom: 25px;
+      font-size: 40px;
+      margin-bottom: 35px;
     }
 
     h3 {
-      font-size: 28px;
+      font-size: 27px;
+      margin-top: 40px;
       margin-bottom: 15px;
     }
 
     p {
       font-size: 18px;
-      line-height: 1.6;
+      line-height: 1.7;
+      max-width: 900px;
     }
 
-    section {
-      margin-bottom: 100px;
-      scroll-margin-top: 30px;
+    ul,
+    ol {
+      font-size: 18px;
+      line-height: 1.8;
     }
 
     video {
       width: 100%;
       max-width: 850px;
-      margin-top: 20px;
+      margin-top: 25px;
+      border-radius: 8px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 25px;
       padding: 12px 20px;
       border: 1px solid #111;
       color: #111;
@@ -94,6 +102,38 @@
     .button:hover {
       background: #111;
       color: white;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        padding: 20px 6%;
+      }
+
+      nav a {
+        display: inline-block;
+        margin-right: 18px;
+        margin-bottom: 8px;
+      }
+
+      header {
+        padding: 60px 6% 40px;
+      }
+
+      main {
+        padding: 0 6%;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
     }
   </style>
 </head>
@@ -113,6 +153,7 @@
 
   <main>
 
+    <!-- ROBOTICS -->
     <section id="robotics">
 
       <h2>Robotics</h2>
@@ -120,8 +161,9 @@
       <h3>Robotic Arm - Stereo Object Detection</h3>
 
       <p>
-        Stereo vision system that detects objects, estimates their 3D position,
-        and sends coordinates to a robotic arm for automated pick-and-place.
+        Stereo vision pick-and-place system using two webcams to detect objects,
+        estimate their 3D position, transform the coordinates into the robot
+        coordinate system, and send target coordinates to a robotic arm.
       </p>
 
       <video controls>
@@ -129,18 +171,45 @@
         Your browser does not support video playback.
       </video>
 
-      <br>
+      <h3>Features</h3>
+
+      <ul>
+        <li>YOLOv8 object detection</li>
+        <li>HSV color detection</li>
+        <li>Stereo camera depth estimation</li>
+        <li>Camera-to-robot coordinate transformation</li>
+        <li>Modbus TCP communication with the robotic arm</li>
+      </ul>
+
+      <h3>How It Works</h3>
+
+      <ol>
+        <li>Capture images from two cameras</li>
+        <li>Detect the object in both images</li>
+        <li>Use stereo vision to calculate its 3D position</li>
+        <li>Transform the position into the robot coordinate system</li>
+        <li>Send the coordinates to the robotic arm</li>
+        <li>The robot picks and places the object</li>
+      </ol>
+
+      <h3>Tech Stack</h3>
+
+      <p>
+        C# · .NET · OpenCV / OpenCvSharp · YOLOv8 · Modbus TCP · Stereo Vision
+      </p>
 
       <a
         class="button"
         href="https://github.com/kianxyz-net/Robotic-Arm---Stereo-Detection"
         target="_blank"
+        rel="noopener noreferrer"
       >
         View Code on GitHub
       </a>
 
     </section>
 
+    <!-- BIOSENSOR -->
     <section id="biosensor">
 
       <h2>Biosensor</h2>
@@ -148,17 +217,25 @@
       <h3>Biosensor Project</h3>
 
       <p>
-        Description of the biosensor project.
+        Add a short description of your biosensor project here.
+      </p>
+
+      <h3>Project Overview</h3>
+
+      <p>
+        Add what the sensor measures, what hardware you used, what you built,
+        and what the final system was able to do.
       </p>
 
     </section>
 
+    <!-- RESUME -->
     <section id="resume">
 
       <h2>Resume</h2>
 
       <p>
-        View my resume for additional experience, coursework, and technical skills.
+        View my resume for experience, coursework, projects, and technical skills.
       </p>
 
       <a
