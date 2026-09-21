@@ -278,6 +278,25 @@
       background: #000;
     }
 
+    /* ---------- Figures ---------- */
+    figure {
+      margin: 24px 0 0 0;
+      max-width: 850px;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
     /* ---------- Footer ---------- */
     footer {
       padding-top: 40px;
@@ -390,8 +409,8 @@
             <path d="M8 8 V56 H56"/>
             <path d="M14 46 C 24 46, 26 18, 36 18 S 46 40, 54 34"/>
           </svg>
-          <h3>Multi-Analyte Electrochemical Biosensor</h3>
-          <p>Low-cost electrochemical potentiostat for non-invasive sweat analysis.</p>
+          <h3>Multi-Analyte Biosensor</h3>
+          <p>Low-cost potentiostat for non-invasive sweat analysis.</p>
           <ul class="chips">
             <li>TLV272</li>
             <li>Potentiostat</li>
@@ -469,12 +488,20 @@
 
       <h2>Biosensor</h2>
 
-      <h3>Multi-Analyte Electrochemical Biosensor</h3>
+      <h3>Multi-Analyte Biosensor</h3>
 
       <p>
         Independent research project focused on developing a low-cost
-        electrochemical potentiostat for non-invasive sweat analysis.
+        potentiostat for non-invasive sweat analysis.
       </p>
+
+      <figure>
+        <img
+          src="images/potentiostat-breadboard.jpg"
+          alt="Potentiostat prototype on a breadboard with an ESP32 and jumper wires"
+          width="1600" height="983" loading="lazy">
+        <figcaption>Work-in-progress breadboard prototype: TLV272 potentiostat circuit with an ESP32.</figcaption>
+      </figure>
 
       <h3>Project Overview</h3>
 
