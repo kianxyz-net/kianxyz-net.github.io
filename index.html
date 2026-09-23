@@ -438,12 +438,6 @@
 
       <h3 class="project-title">Robotic Arm - Stereo Object Detection</h3>
 
-      <p>
-        Stereo vision pick-and-place system using two webcams to detect objects,
-        locate them in 3D, transform the coordinates into the robot
-        coordinate system, and send target coordinates to a robotic arm.
-      </p>
-
       <!-- Optional: add poster="images/vision-demo-poster.jpg" so Safari shows a thumbnail before play -->
       <video controls preload="metadata" playsinline>
         <source
@@ -452,26 +446,35 @@
         Your browser does not support video playback.
       </video>
 
-      <h3>Features</h3>
+      <h3>Problem</h3>
 
-      <ul>
-        <li>YOLOv8 object detection</li>
-        <li>HSV color detection</li>
-        <li>Stereo camera 3D localization</li>
-        <li>Camera-to-robot coordinate transformation</li>
-        <li>Modbus TCP communication with the robotic arm</li>
-      </ul>
+      <p>
+        Industrial stereo vision hardware can cost thousands of dollars. Could
+        two $10 USB webcams locate objects accurately enough for a robotic arm
+        to pick them up?
+      </p>
 
-      <h3>How It Works</h3>
+      <h3>Solution</h3>
 
-      <ol>
-        <li>Capture images from two cameras</li>
-        <li>Detect the object in both images</li>
-        <li>Use stereo vision to calculate its 3D position</li>
-        <li>Transform the position into the robot coordinate system</li>
-        <li>Send the coordinates to the robotic arm</li>
-        <li>The robot picks and places the object</li>
-      </ol>
+      <p>
+        YOLOv8 detects the object in both camera views. I then sample the
+        detected object's color and create a tighter mask around it to remove
+        background pixels before triangulation. Stereo calibration converts
+        the two image points into a 3D camera position, and hand-eye
+        calibration transforms that position into the robot's coordinate
+        frame. The final coordinates are sent to the robot controller through
+        Modbus TCP.
+      </p>
+
+      <h3>Result</h3>
+
+      <p>
+        The final system achieved under 1 mm localization error in my test
+        setup and supported end-to-end pick-and-place using the two $10
+        webcams. The main challenges were noisy stereo depth, exposure
+        differences between cameras, and getting the camera-to-robot
+        calibration accurate enough for reliable picking.
+      </p>
 
       <h3>Tech Stack</h3>
 
